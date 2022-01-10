@@ -18,11 +18,6 @@
  - origin: disconnected/01_get_oc.sh
    path: /root/01_get_oc.sh
    mode: 700
-{% if metal3 %}
- - origin: disconnected/02_cache.sh
-   path: /root/02_cache.sh
-   mode: 700
-{% endif %}
  - origin: disconnected/03_registry.sh
    path: /root/03_registry.sh
    mode: 700
@@ -46,9 +41,6 @@
    mode: 700
  cmds:
  - bash /root/01_get_oc.sh
-{% if metal3 %}
- - bash /root/02_cache.sh
-{% endif %}
  - bash /root/03_registry.sh
  - bash /root/04_extras.sh
 {% if disconnected_operators %}
